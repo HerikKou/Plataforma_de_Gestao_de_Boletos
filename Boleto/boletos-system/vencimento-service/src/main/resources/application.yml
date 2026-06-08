@@ -1,0 +1,29 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: vencimento-service
+  datasource:
+    url: jdbc:postgresql://localhost:5432/vencimentoservice
+    username: postgres
+    password: postgres
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: vencimento-group
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring.json.trusted.packages: "*"
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+kafka:
+  topics:
+    boleto-criado: boleto-criado
+    boleto-perto-vencimento: boleto-perto-vencimento
+    boleto-vencido: boleto-vencido

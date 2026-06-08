@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><meta charset="UTF-8"><title>Notificacao Boleto</title></head>
+<body>
+  <h2>Notificacao de Boleto</h2>
+  <p th:text="${mensagem}"></p>
+  <p><strong>Vencimento:</strong> <span th:text="${event.dataVencimento}"></span></p>
+  <p><strong>Valor:</strong> R$ <span th:text="${event.valorOriginal}"></span></p>
+</body>
+</html>

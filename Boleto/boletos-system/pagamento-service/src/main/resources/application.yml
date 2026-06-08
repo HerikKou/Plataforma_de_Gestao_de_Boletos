@@ -1,0 +1,23 @@
+server:
+  port: 8084
+spring:
+  application:
+    name: pagamento-service
+  datasource:
+    url: jdbc:postgresql://localhost:5432/pagamentoservice
+    username: postgres
+    password: postgres
+  jpa:
+    hibernate:
+      ddl-auto: update
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: pagamento-group
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring.json.trusted.packages: "*"
+kafka:
+  topics:
+    boleto-vencido: boleto-vencido
