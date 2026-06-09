@@ -7,7 +7,7 @@
 ![Docker](https://img.shields.io/badge/Docker-Containerized-2496ED?style=flat-square&logo=docker&logoColor=white)
 ![Angular](https://img.shields.io/badge/Angular-Frontend-DD0031?style=flat-square&logo=angular&logoColor=white)
 
-Plataforma distribuída para gerenciamento de boletos bancários, construída com arquitetura de microsserviços orientada a eventos. Simula um ambiente real de fintech/banco digital onde serviços independentes se comunicam de forma assíncrona e resiliente via Apache Kafka.
+Uma plataforma distribuída de gestão de boletos que automatiza o monitoramento, a notificação pré-vencimento e o processamento de pagamentos, eliminando esquecimentos e juros por atraso de forma 100% manual.
 
 
 ---
